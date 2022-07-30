@@ -20,7 +20,7 @@
                 <div class="filter">
                     <label class="title">Filters</label>
                     <div class="options">
-                        <button>Brightness</button>
+                        <button class="active">Brightness</button>
                         <button>Saturation</button>
                         <button>Inversion</button>
                         <button>Grayscale</button>
@@ -48,8 +48,9 @@
             </div>
         </div>
         <div class="controls">
-            <button class="reset-filter"></button>
+            <button class="reset-filter">Reset Filter</button>
             <div class="row">
+                <input type="file" class="file-input" accept="images/*">
                 <button class="choose-img">Choose Image</button>
                 <button class="save-img">Save Image</button>
             </div>
