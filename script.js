@@ -1,7 +1,7 @@
 const fileInput = document.querySelector(".file-input");
-filterOptions = document.querySelector(".filter button");
-previewImg = document.querySelector(".preview-img img");
 chooseImgBtn = document.querySelector(".choose-img");
+previewImg = document.querySelector(".preview-img img");
+
 
 const loadImage = () => {
     let file = fileInput.files[0] //getting user selected file
@@ -10,8 +10,17 @@ const loadImage = () => {
     previewImg.addEventListener("load", ()=>{
         document.querySelector(".container").classList.remove("disable")
     })
-
 }
+chooseImgBtn.addEventListener("click", () => fileInput.click());
+
+
+fileInput.addEventListener("change", loadImage)
+
+
+/* filterOptions = document.querySelector(".filter button");
+
+
+
 
 filterOptions.forEach(option => {
     option.addEventListener("click", () => {      //adding click event listener to all filter buttons
@@ -20,5 +29,6 @@ filterOptions.forEach(option => {
     });
 });
 
-fileInput.addEventListener("change", loadImage)
-chooseImgBtn.addEventListener("click", () => fileInput.click());
+ */
+
+//fonksiyon addeventlistener in altina gelince calismiyor. fonksiyon üstte olmali.
